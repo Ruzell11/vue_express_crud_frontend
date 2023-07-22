@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Login from '../../login/index.vue';
-import Register from '../../register/index.vue';
+import Login from '../login/index.vue';
+import Register from '../register/index.vue'
 
 const routes = [
-    { path: '/login', component: Login, name: "Login" },
+    { path: '/', component: Login, name: "Login" },
     { path: '/register', component: Register, name: "Register" },
     // Add other routes here
 ];
