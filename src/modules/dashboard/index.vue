@@ -1,5 +1,5 @@
 <script>
-import Modal from '../common/components/modal.vue';
+import Modal from '../common/components/Modal.vue';
 import AddTaskForm from './component/addTaskForm.vue';
 import TaskList from './component/taskList.vue';
 import { addTask, getTaskList, logoutUser } from './service'
