@@ -1,7 +1,7 @@
 <script>
 import { showNotification } from '../../common/utils/notification'
 import { useToRegisterUser } from '../service'
-import useMutation from '@tanstack/vue-query'
+import { useMutation } from '@tanstack/vue-query'
 export default {
   name: "RegisterForm",
   setup() {
@@ -41,25 +41,19 @@ export default {
     <div class="rounded-md shadow-sm space-y-2">
       <div>
         <label for="username" class="sr-only">Username</label>
-        <input id="username" name="username" type="text" :class="{
-          'border-red-500': errors.username
-        }" v-model="formData.username" autocomplete="username" required
+        <input id="username" name="username" type="text" v-model="formData.username" autocomplete="username" required
           class="appearance-none rounded-none relative block w-full px-3 py-2 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
           placeholder="Username" />
       </div>
       <div>
         <label for="email" class="sr-only">Email</label>
-        <input id="email" name="email" type="email" :class="{
-          'border-red-500': errors.username
-        }" v-model="formData.email" autocomplete="email" required
+        <input id="email" name="email" type="email" v-model="formData.email" autocomplete="email" required
           class="appearance-none rounded-none relative block w-full px-3 py-2 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
           placeholder="Email" />
       </div>
       <div>
         <label for="password" class="sr-only">Password</label>
-        <input id="password" name="password" type="password" :class="{
-          'border-red-500': errors.password
-        }" v-model="formData.password" autocomplete="password" required
+        <input id="password" name="password" type="password" v-model="formData.password" autocomplete="password" required
           class="appearance-none rounded-none relative block w-full px-3 py-2 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
           placeholder="Password" />
 

@@ -3,10 +3,12 @@ import { useToLoginUser } from '../service';
 import { showNotification } from '../../common/utils/notification';
 import jsCookie from 'js-cookie';
 import { useMutation } from '@tanstack/vue-query';
+import { useRouter } from 'vue-router';
 
 export default {
     name: 'LoginForm',
     setup() {
+        const router = useRouter();
         const { mutate, isLoading } = useMutation(useToLoginUser);
 
         const formData = {
@@ -25,6 +27,7 @@ export default {
                     }))
 
                     jsCookie.set('token', response.data.token)
+                    router.push('/dashboard')
 
                 },
                 onError: () => {
