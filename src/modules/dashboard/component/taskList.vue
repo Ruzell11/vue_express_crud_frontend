@@ -1,5 +1,5 @@
 <script >
-import Modal from '../../common/components/modal.vue'
+import Modal from '../../common/components/Modal.vue'
 import UpdateTaskForm from './updateTaskForm.vue'
 import DeleteWarning from './deleteWarning.vue'
 import { useQueryClient } from '@tanstack/vue-query'
