@@ -8,7 +8,7 @@ export default {
     const { mutate, isLoading } = useMutation(useToRegisterUser);
 
     const formData = {
-      username: '',
+      name: '',
       email: '',
       password: '',
     };
@@ -17,7 +17,9 @@ export default {
       mutate(formData, {
         onSuccess: () => {
           showNotification('Register successful!', 'success');
-
+          formData.name = ""
+          formData.email = ""
+          formData.password = ""
 
         },
         onError: () => {
@@ -40,10 +42,10 @@ export default {
   <form class="mt-8 space-y-3" @submit.prevent="handleSubmit">
     <div class="rounded-md shadow-sm space-y-2">
       <div>
-        <label for="username" class="sr-only">Username</label>
-        <input id="username" name="username" type="text" v-model="formData.username" autocomplete="username" required
+        <label for="name" class="sr-only">name</label>
+        <input id="name" name="name" type="text" v-model="formData.name" autocomplete="name" required
           class="appearance-none rounded-none relative block w-full px-3 py-2 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-          placeholder="Username" />
+          placeholder="Name" />
       </div>
       <div>
         <label for="email" class="sr-only">Email</label>

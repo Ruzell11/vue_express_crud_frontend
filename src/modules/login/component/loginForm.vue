@@ -31,7 +31,7 @@ export default {
 
                 },
                 onError: () => {
-                    showNotification("Something went wrong. Please try again", "error")
+                    showNotification("Incorrect Email or password", "error")
                 }
             });
         };

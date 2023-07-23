@@ -47,8 +47,6 @@ export default {
                 this.showModalDeleteWarning = false
             }
         }
-
-
     },
     watch: {
         // Watch for changes in the dataTaskList prop
@@ -64,6 +62,9 @@ export default {
         <!-- List of Items -->
         <div v-if="isLoadingTaskList">Loading...</div>
         <div v-else class="space-y-2">
+            <div v-if="taskList === undefined" class="text-center mt-4 text-gray-500">
+                No task available at the moment, please add.
+            </div>
             <div v-for="task in taskList" :key="task.task_id"
                 class="flex items-center justify-between bg-white shadow-sm mb-4 p-4 rounded-lg">
                 <div class="flex-1">
