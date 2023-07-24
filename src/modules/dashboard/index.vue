@@ -33,6 +33,7 @@ export default {
             },
             onError: () => {
                 showNotification("Unauthenticated", "error")
+                router.push('/')
             }
         })
         const LIST_KEY = "TODOS"
