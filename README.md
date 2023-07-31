@@ -61,7 +61,6 @@ License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 Authors
-Your Name
-Acknowledgments
-Thanks to the contributors and the open-source community for their support.
+Ruzell
+
 Happy coding!
